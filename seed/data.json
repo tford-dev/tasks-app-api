@@ -1,0 +1,29 @@
+{
+    "users": [
+        {
+            "firstName": "Tim",
+            "lastName": "Ferris",
+            "emailAddress": "tim@ferris.com",
+            "password": "timpassword"
+        },
+        {
+            "firstName": "Robert",
+            "lastName": "Kiyosaki",
+            "emailAddress": "rob@kiyosaki.com",
+            "password": "robpassword"
+        }
+    ],
+
+    "tasks": [
+        {
+            "userId": 1,
+            "title": "Attend business meeting at noon",
+            "description": "At noon on monday, arrive at meeting to discuss incoming shipments."
+        },
+        {
+            "userId": 2,
+            "title": "Drop package off at post office",
+            "description": "Monday morning, arrive at post office to ship off designer shoes."
+        }
+    ]
+}

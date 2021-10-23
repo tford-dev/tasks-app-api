@@ -1,0 +1,14 @@
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "toDos-api.db"
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": "toDos-api.db"
+  },
+  "production": {
+    "dialect": "sqlite",
+    "storage": "toDos-api.db"
+  }
+}
