@@ -18,7 +18,13 @@ module.exports = (sequelize) => {
         description: {
             type: DataTypes.TEXT,
             allowNull: false
-        }
+        },
+
+        time: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+
     }, {sequelize});
 
     //Data association with User table

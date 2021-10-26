@@ -48,13 +48,14 @@ class Database {
         return this.context
             .execute(`
                 INSERT INTO Tasks
-                (userId, title, description, createdAt, updatedAt)
+                (userId, title, description, time, createdAt, updatedAt)
                 VALUES
-                (?, ?, ?, datetime('now'), datetime('now'));
+                (?, ?, ?, ?, datetime('now'), datetime('now'));
             `,
             task.userId,
             task.title,
-            task.description);
+            task.description,
+            task.time);
     }
 
     async hashUserPasswords(users) {
@@ -128,7 +129,8 @@ class Database {
             CREATE TABLE Tasks (
                 id INTEGER PRIMARY KEY AUTOINCREMENT, 
                 title VARCHAR(255) NOT NULL DEFAULT '', 
-                description TEXT NOT NULL DEFAULT '',  
+                description TEXT NOT NULL DEFAULT '',
+                time TEXT NOT NULL DEFAULT '',  
                 createdAt DATETIME NOT NULL, 
                 updatedAt DATETIME NOT NULL, 
                 userId INTEGER NOT NULL DEFAULT -1 

@@ -39,11 +39,12 @@ router.get("/tasks", authenticateUser, asyncHandler(async(req, res) => {
         ]
     });
   
-    //Loops through task data and maps title, description, createdAt for UI
+    //Loops through task data and maps title, description, time, createdAt for UI
     tasks.map(task =>{
         let taskArr = { 
             id: task.id,
             title: task.title,
+            time: task.time,
             description: task.description,
             createdAt: task.createdAt,
             userId: task.userId,
@@ -77,6 +78,7 @@ router.get("/tasks/:id", authenticateUser, asyncHandler(async(req, res) => {
                     id: task.id,
                     title: task.title,
                     description: task.description,
+                    time: task.time,
                     userId: task.userId,
                     createdAt: task.createdAt,
             });
