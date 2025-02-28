@@ -8,7 +8,7 @@
     "storage": "toDos-api.db"
   },
   "production": {
-    "dialect": "sqlite",
-    "storage": "toDos-api.db"
+    "dialect": "postgres",
+    "use_env_variable": "DATABASE_URL"
   }
 }
